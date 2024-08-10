@@ -1,0 +1,46 @@
+{
+  "name": "discord-games-bot-expansion",
+  "version": "1.0.0",
+  "description": "A versatile Discord bot for hosting and managing interactive games.",
+  "main": "src/index.ts",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && tsc-watch --onSuccess \"npm run build:prod\"",
+    "build:prod": "tsc --module commonjs --outDir dist",
+    "start": "ts-node src/index.ts",
+    "dev": "tsc-watch --onSuccess \"npm run start\"",
+    "lint": "eslint src//.ts",
+    "format": "prettier --write src//.ts",
+    "test": "jest",
+    "prepublishOnly": "npm run build:prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spectra-ai-codegen/discord-games-bot-expansion.git"
+  },
+  "author": "Spectra.codes",
+  "license": "GNU AGPLv3",
+  "bugs": {
+    "url": "https://github.com/spectra-ai-codegen/discord-games-bot-expansion/issues"
+  },
+  "homepage": "https://github.com/spectra-ai-codegen/discord-games-bot-expansion#readme",
+  "dependencies": {
+    "@types/discord.js": "^14.6.5",
+    "@types/node": "^18.11.9",
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
+    "mysql2": "^2.3.3",
+    "node-fetch": "^3.3.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.2.4",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.7",
+    "tsc-watch": "^5.0.3"
+  }
+}
